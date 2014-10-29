@@ -1,0 +1,16 @@
+{
+  "name": "Max",
+  "value": 100,
+  "children": [
+    {"name": "Max", "value": 100},
+    {"name": "Aax", "value": 10},
+    {"name": "Xax", "value": 200},
+    {"name": "Rax", "value": 125},
+    {"name": "Fax", "value": 50},
+    {"name": "Tax", "value": 78},
+    {"name": "Lax", "value": 23},
+    {"name": "Max", "value": 210},
+    {"name": "Pax", "value": 140},
+    {"name": "Qax", "value": 90}
+  ]
+}

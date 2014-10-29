@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Drawing SVG Shapes with D3</title>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+<script>
+  var h=100;
+  var w=400;
+  var ds; //global var for data
+
+
+  function showHeader(ds){
+    d3.select("body").append("h1")
+      .text(ds.category + "Sales (2013)");
+  }
+  d3.json("https://api.github.com/repos/bsullins/d3js-resources/contents/monthlySalesbyCategoryMultiple.json", function(error, data){
+    if(error){
+      console.log(error);
+    }else{
+      console.log(data);
+    }
+
+    var decodedData = JSON.parse(window.atob(data.content));
+
+    console.log(decodedData.contents);
+
+    decodedData.contents.forEach(function(ds){
+      console.log(ds)
+      showHeader(ds);
+      buildLine(ds);
+    })
+
+  })
+</script>
+
+</body>
+</html>
